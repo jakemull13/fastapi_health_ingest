@@ -15,7 +15,7 @@ BQ_WORKOUTS_TABLE = "workouts"
 BQ_ROUTES_TABLE = "workout_routes"
 BQ_METRICS_TABLE = "metrics"
 GCS_BUCKET = "your-gcs-bucket-name"
-UPLOAD_RAW_TO_GCS = True
+UPLOAD_RAW_TO_GCS = False
 
 # GCP Clients
 bq_client = bigquery.Client(project=PROJECT_ID)

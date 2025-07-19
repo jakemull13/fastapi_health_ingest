@@ -40,7 +40,7 @@ This project includes a GitHub Actions workflow that:
 
 1. **Enable Cloud Run & Artifact Registry in GCP**
 2. **Create GitHub secrets**:
-   - `GCP_PROJECT`: `jake-mullins-portfolio`
+   - `GCP_PROJECT`: ``
    - `GCP_REGION`: `us-central1`
    - `GCP_SA_KEY`: Base64-encoded JSON service account key with deploy and artifact permissions
 

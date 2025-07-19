@@ -126,7 +126,7 @@ class Workout(BaseModel):
     end: Optional[str]
     duration: Optional[float]
     activeEnergyBurned: Optional[QuantityUnit]
-    route: Optional[List[RoutePoint]]
+    route: Optional[List[RoutePointIn]] = None 
 
 class Metric(BaseModel):
     type: str

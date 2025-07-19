@@ -55,3 +55,5 @@ uvicorn main:app --reload
 ## 🔒 Notes
 - Replace `your-gcs-bucket-name` in `main.py` with your actual GCS bucket.
 - Edit `.github/workflows/deploy.yml` for customization.
+
+autoexport url/;

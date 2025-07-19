@@ -13,7 +13,7 @@ Ingest workout and route data.
 ```bash
 curl -X POST https://<YOUR_CLOUD_RUN_URL>/upload/workouts \
   -H "Content-Type: application/json" \
-  -d @sample_workouts.json
+  -d @data/sample_workouts.json
 ```
 
 ### `POST /upload/metrics`
@@ -25,7 +25,7 @@ Ingest health metrics like heart rate, step count, etc.
 ```bash
 curl -X POST https://<YOUR_CLOUD_RUN_URL>/upload/metrics \
   -H "Content-Type: application/json" \
-  -d @sample_metrics.json
+  -d @data/sample_metrics.json
 ```
 
 ## 🧱 Deployment
@@ -40,7 +40,7 @@ This project includes a GitHub Actions workflow that:
 
 1. **Enable Cloud Run & Artifact Registry in GCP**
 2. **Create GitHub secrets**:
-   - `GCP_PROJECT`: ``
+   - `GCP_PROJECT`: `your-project`
    - `GCP_REGION`: `us-central1`
    - `GCP_SA_KEY`: Base64-encoded JSON service account key with deploy and artifact permissions
 

@@ -1,0 +1,18 @@
+{
+  "data": {
+    "metrics": [
+      {
+        "type": "HeartRate",
+        "unit": "count/min",
+        "date": "2025-07-19T12:01:00Z",
+        "value": 78
+      },
+      {
+        "type": "StepCount",
+        "unit": "count",
+        "date": "2025-07-19T12:05:00Z",
+        "value": 120
+      }
+    ]
+  }
+}

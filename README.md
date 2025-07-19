@@ -11,7 +11,7 @@ Ingest workout and route data.
 #### Example `curl`:
 
 ```bash
-curl -X POST https://<YOUR_CLOUD_RUN_URL>/upload/workouts \
+curl -X POST https://ingest-api-381855915236.us-central1.run.app/upload/workouts \
   -H "Content-Type: application/json" \
   -d @data/sample_workouts.json
 ```
@@ -23,7 +23,7 @@ Ingest health metrics like heart rate, step count, etc.
 #### Example `curl`:
 
 ```bash
-curl -X POST https://<YOUR_CLOUD_RUN_URL>/upload/metrics \
+curl -X POST https://ingest-api-381855915236.us-central1.run.app/upload/metrics \
   -H "Content-Type: application/json" \
   -d @data/sample_metrics.json
 ```

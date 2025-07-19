@@ -11,9 +11,9 @@ app = FastAPI()
 # GCP Configuration
 PROJECT_ID = "jake-mullins-portfolio"
 BQ_DATASET = "personal_health"
-BQ_WORKOUTS_TABLE = "workouts"
-BQ_ROUTES_TABLE = "workout_routes"
-BQ_METRICS_TABLE = "metrics"
+BQ_WORKOUTS_TABLE = "raw_workouts"
+BQ_ROUTES_TABLE = "raw_workout_routes"
+BQ_METRICS_TABLE = "raw_metrics"
 GCS_BUCKET = "your-gcs-bucket-name"
 UPLOAD_RAW_TO_GCS = False
 

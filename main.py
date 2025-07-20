@@ -166,3 +166,8 @@ async def upload_metrics(req: UploadMetricsRequest):
         return {"message": f"{len(metrics)} metrics stored", "gcs_backup": gcs_url}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+if __name__ == "__main__":
+    create_bigquery_tables()
+    app.run(debug=True)
+

@@ -105,7 +105,6 @@ def create_bigquery_tables():
         bigquery.SchemaField("raw_json", "STRING"),
     ])
 
-create_bigquery_tables()
 
 # Pydantic models
 class QuantityUnit(BaseModel):

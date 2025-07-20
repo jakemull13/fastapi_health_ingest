@@ -44,16 +44,17 @@ def insert_workouts_bq(workouts: List[dict]):
 def insert_routes_bq(workouts: List[dict]):
     rows = []
     for w in workouts:
-        for p in w.get("route", []):
-            rows.append({
-                "workout_id": w.get("id"),
-                "timestamp": p.get("timestamp"),
-                "latitude": p.get("latitude"),
-                "longitude": p.get("longitude"),
-                "altitude": p.get("altitude"),
-                "speed": p.get("speed"),
-                "course": p.get("course")
-            })
+        if w.route:
+            for p in w.get("route", []):
+                rows.append({
+                    "workout_id": w.get("id"),
+                    "timestamp": p.get("timestamp"),
+                    "latitude": p.get("latitude"),
+                    "longitude": p.get("longitude"),
+                    "altitude": p.get("altitude"),
+                    "speed": p.get("speed"),
+                    "course": p.get("course")
+                })
     if rows:
         bq_client.insert_rows_json(f"{PROJECT_ID}.{BQ_DATASET}.{BQ_ROUTES_TABLE}", rows)
 

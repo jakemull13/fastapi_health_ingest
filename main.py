@@ -39,6 +39,7 @@ def insert_workouts_bq(workouts: List[dict]):
         "active_energy_burned": w.get("activeEnergyBurned", {}).get("qty"),
         "raw_json": json.dumps(w)
     } for w in workouts]
+    print(rows)
     bq_client.insert_rows_json(f"{PROJECT_ID}.{BQ_DATASET}.{BQ_WORKOUTS_TABLE}", rows)
 
 def insert_routes_bq(workouts: List[dict]):

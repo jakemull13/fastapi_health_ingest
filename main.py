@@ -44,7 +44,7 @@ def insert_workouts_bq(workouts: List[dict]):
 def insert_routes_bq(workouts: List[dict]):
     rows = []
     for w in workouts:
-        if w.route:
+        if w.get("route"):
             for p in w.get("route", []):
                 rows.append({
                     "workout_id": w.get("id"),

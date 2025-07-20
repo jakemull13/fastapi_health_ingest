@@ -145,6 +145,7 @@ class UploadMetricsRequest(BaseModel):
 async def upload_workouts(req: UploadWorkoutsRequest):
     try:
         workouts = [w.dict() for w in req.data.get("workouts", [])]
+        print(workouts)
         if not workouts:
             return {"message": "No workouts provided"}
         insert_workouts_bq(workouts)

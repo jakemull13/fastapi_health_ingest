@@ -13,7 +13,7 @@ Ingest workout and route data.
 ```bash
 curl -X POST https://ingest-api-381855915236.us-central1.run.app/upload/workouts \
   -H "Content-Type: application/json" \
-  -d @data/sample_workouts.json
+  -d @data/sample_workouts_real.json
 ```
 
 ### `POST /upload/metrics`
